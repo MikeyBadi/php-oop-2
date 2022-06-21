@@ -8,28 +8,6 @@ require_once __DIR__ . '/../class/games.php';
 require_once __DIR__ . '/../class/products.php';
 require_once __DIR__ . '/../class/regCust.php';
 
-$customers = [
-  [
-    'name' => 'Mihai',
-    'surname' => 'Badia',
-    'birth' => '1999/03/01',
-    'cardValid' => '24/12',
-    'expired' => false,
-    'registered' => true,
-    'discount' => '20',
-  ],
-  [
-    'name' => 'Iahim',
-    'surname' => 'Aidab',
-    'birth' => '1991/09/12',
-    'cardValid' => '22/05',
-    'expired' => true,
-    'registered' => false,
-    'discount' => '0',
-
-  ]
-];
-
 $products = [
   [
    'name' => 'Mordicchio',
@@ -60,3 +38,26 @@ $products = [
    'type' => 'shampoo'
   ]
 ];
+
+$customers = [
+  [
+    'name' => 'Mihai',
+    'surname' => 'Badia',
+    'birth' => '1999/03/01',
+    'cardValid' => '24/12',
+    'expired' => false,
+    'registered' => true,
+    'discount' => '20',
+  ],
+  [
+    'name' => 'Iahim',
+    'surname' => 'Aidab',
+    'birth' => '1991/09/12',
+    'cardValid' => '22/05',
+    'expired' => true,
+    'registered' => false,
+    'discount' => '0',
+
+  ]
+];
+

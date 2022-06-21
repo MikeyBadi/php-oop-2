@@ -4,15 +4,7 @@ require_once __DIR__ . '/../db/db_com.php';
 $usersArr=[];
 $productsArr=[];
 
-foreach($customers as $customer){
-  if($customer['registered']){
-    $cust = new Buyer($customer['name'],$customer['surname'],$customer['birth'],$customer['cardValid'],$customer['discount']);
-    $usersArr[] = $cust;
-  }else{
-    $cust = new RegCustomer($customer['name'],$customer['surname'],$customer['birth'],$customer['cardValid'],$customer['discount'],$customer['registered']);
-    $usersArr[] = $cust;
-  }
-}
+
 
 foreach($products as $product){
   if($product['category']=== 'care'){
@@ -30,25 +22,39 @@ foreach($products as $product){
   }
 }
 
-// var_dump(date('y/m'))
+foreach($customers as $customer){
+  if($customer['registered']){
+    $cust = new Buyer($customer['name'],$customer['surname'],$customer['birth'],$customer['cardValid'],$customer['discount']);
+    $usersArr[] = $cust;
+  }else{
+    $cust = new RegCustomer($customer['name'],$customer['surname'],$customer['birth'],$customer['cardValid'],$customer['discount'],$customer['registered']);
+    $usersArr[] = $cust;
+  }
+}
+
+
+
+var_dump($productsArr)
 ?>
 <main>
+  <h3>Users</h3>
   <?php foreach($usersArr as $user):?>
     <div>
       <ul>
         <li>Name: <?php echo $user->getName()?></li>
-        <li>surname: <?php echo $user->getSurname()?></li>
-        <li>Name: <?php echo $user->getBirth()?></li>
-        <li>Name: <?php echo $user->getCardValid()?></li>
-        <li>Name: <?php echo $user->getDiscount()?>%</li>
+        <li>Surname: <?php echo $user->getSurname()?></li>
+        <li>Birth: <?php echo $user->getBirth()?></li>
+        <li>Card Expiration: <?php echo $user->getCardValid()?></li>
+        <li>Discount: <?php echo $user->getDiscount()?>%</li>
       </ul>
     </div>
   <?php endforeach?>
 <hr>
+  <h3>Products</h3>
   <?php foreach($productsArr as $product):?>
     <div>
       <ul>
-        <li>Name: <?php echo $product->getName()?></li>
+        <li>Name: <?php echo $product->getProdName()?></li>
         <li>Adapted for: <?php echo $product->getAnimal()?></li>
         <li>Price: <?php echo $product->getPrice()?>€</li>
         <li>Category: <?php echo $product->getCategory()?></li>

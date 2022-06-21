@@ -5,8 +5,8 @@
   class Care extends Products{
     private $type;
 
-    public function __construct($_name, $_animal, $_price, $_category, $_type){
-      parent::__construct($_name, $_animal, $_price, $_category);
+    public function __construct($_prodName, $_animal, $_price, $_category, $_type){
+      parent::__construct($_prodName, $_animal, $_price, $_category);
       
       $this->type = $_type;
     }

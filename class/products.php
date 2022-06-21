@@ -1,21 +1,21 @@
 <?php
 
   class Products{
-    private $name;
+    private $prodName;
     private $animal;
     private $price;
     private $category;
 
-    public function __construct($_name, $_animal, $_price, $_category){
-      $this-> name = $_name;
+    public function __construct($_prodName, $_animal, $_price, $_category){
+      $this-> prodName = $_prodName;
       $this-> animal = $_animal;
       $this-> price = $_price;
       $this-> category = $_category;
     }
     
     // Setter
-    public function setName($_name){
-      $this-> name = $_name;
+    public function setProdName($_prodName){
+      $this-> prodName = $_prodName;
     }
     public function setAnimal($_animal){
       $this-> animal = $_animal;
@@ -29,8 +29,8 @@
 
     // Getter
 
-    public function getName(){
-      $this-> name;
+    public function getProdName(){
+      $this-> prodName;
     }
     public function getAnimal(){
       $this-> animal;
