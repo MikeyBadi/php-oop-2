@@ -30,15 +30,15 @@
     // Getter
 
     public function getProdName(){
-      $this-> prodName;
+      return $this-> prodName;
     }
     public function getAnimal(){
-      $this-> animal;
+      return $this-> animal;
     }
     public function getPrice(){
-      $this-> price;
+      return $this-> price;
     }
     public function getCategory(){
-      $this-> category;
+      return $this-> category;
     }
   }

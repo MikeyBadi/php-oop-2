@@ -34,7 +34,6 @@ foreach($customers as $customer){
 
 
 
-var_dump($productsArr)
 ?>
 <main>
   <h3>Users</h3>
