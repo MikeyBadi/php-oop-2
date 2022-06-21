@@ -7,7 +7,7 @@
 
     public function __construct($_name, $_surname, $_birth, $_cardValid, $_discount, $_registred){
       parent::__construct($_name, $_surname, $_birth, $_cardValid, $_discount);
-      
+      $this->discount = 20;
       $this->registred = $_registred;
     }
 

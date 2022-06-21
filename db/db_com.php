@@ -14,12 +14,19 @@ $customers = [
     'surname' => 'Badia',
     'birth' => '1999/03/01',
     'cardValid' => '24/12',
+    'expired' => false,
+    'registered' => true,
+    'discount' => '20',
   ],
   [
     'name' => 'Iahim',
     'surname' => 'Aidab',
     'birth' => '1991/09/12',
     'cardValid' => '22/05',
+    'expired' => true,
+    'registered' => false,
+    'discount' => '0',
+
   ]
 ];
 

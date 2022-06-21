@@ -38,7 +38,7 @@
     public function getPrice(){
       $this-> price;
     }
-    public function getCategory($_category){
+    public function getCategory(){
       $this-> category;
     }
   }

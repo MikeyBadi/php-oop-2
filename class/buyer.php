@@ -27,13 +27,7 @@
       $this->birth = $_birth;
     }
     public function setCardValid($_cardValid){
-      
-      if($_cardValid < date("y-m")){
-        $this->cardValid = $_cardValid;
-        $this->cardExpired = false;
-      }else{
-        echo "card expired";
-      }
+      $this->cardValid = $_cardValid;
     }
     public function setDiscount($_discount){
       $this->discount = $_discount;
